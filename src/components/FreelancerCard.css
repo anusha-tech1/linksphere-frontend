@@ -1,0 +1,84 @@
+.freelancer-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+  width: 100%;
+  height: 380px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa, #dfe9f3); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.freelancer-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  margin: 10px auto; 
+  object-fit: cover; 
+}
+
+.freelancer-card h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.freelancer-card p {
+  color: #555;
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.freelancer-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.freelancer-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+  background-color: #d3d3d3; 
+  color: #333; 
+  border: 1px solid #ccc;
+  padding: 6px 6px; 
+  font-size: 12px;
+  border-radius: 100px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.edit-button:hover {
+  background-color: #b0b0b0; 
+  color: #fff;
+}
+
+.edit-button:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); 
+}
+.contact-button {
+  background-color: #a0c4ff; 
+  color: #1f3c88; 
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #89b3f5; 
+  transform: scale(1.05); 
+}

@@ -1,0 +1,116 @@
+.payment-history {
+    margin: 20px 0;
+  }
+  
+  .payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .payment-table th,
+  .payment-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .payment-table th {
+    background-color: #f7f7f7;
+    font-weight: 600;
+  }
+  
+  .status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .status-success {
+    background-color: #e6f7e6;
+    color: #2e7d32;
+  }
+  
+  .status-pending {
+    background-color: #fff8e1;
+    color: #ff8f00;
+  }
+  
+  .status-processing {
+    background-color: #e3f2fd;
+    color: #1565c0;
+  }
+  
+  .status-error {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .status-refunded {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+  }
+  
+  .payment-loading {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+  }
+  
+  .payment-error {
+    padding: 15px;
+    color: #c62828;
+    background-color: #ffebee;
+    border-radius: 4px;
+  }
+  
+  .no-payments {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  /* For PaymentButton component */
+  .payment-button-container {
+    margin: 20px 0;
+  }
+  
+  .payment-button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .payment-button.advance {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .payment-button.final {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .payment-button:hover {
+    opacity: 0.9;
+  }
+  
+  .payment-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .payment-error-message {
+    margin-top: 10px;
+    padding: 10px;
+    color: #c62828;
+    background-color: #ffebee;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
