@@ -52,7 +52,7 @@ const FreelancersBids = () => {
           try {
             const contractId = bid.contractId?._id || bid.contractId;
             const contractRes = await axios.get(
-              `http://localhost:4001/api/contracts/${contractId}`,
+              `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
               { headers: { Authorization: `Bearer ${token}` } }
             );
             console.log('[FreelancersBids] Contract fetched:', {
@@ -186,7 +186,7 @@ const FreelancersBids = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://localhost:4001/api/bids/${bidId}`,
+        `https://linksphere-backend-jkws.onrender.com/api/bids/${bidId}`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -215,7 +215,7 @@ const FreelancersBids = () => {
       const contractId = ensureStringId(currentContractId);
   
       await axios.post(
-        `http://localhost:4001/api/contracts/${contractId}/finalize`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}/finalize`,
         { status: "active" },
         { headers: { Authorization: `Bearer ${token}` } }
       );

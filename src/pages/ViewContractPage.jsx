@@ -29,7 +29,7 @@ const ViewContractPage = () => {
         
         // Fetch contract details
         const contractRes = await axios.get(
-          `http://localhost:4001/api/contracts/${contractId}`,
+          `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         
@@ -38,8 +38,8 @@ const ViewContractPage = () => {
         // Find associated bid
         try {
           const bidsEndpoint = storedUserRole === "client"
-             ? "http://localhost:4001/api/bids/freelancers-bids"
-             : "http://localhost:4001/api/bids/my-bids";
+             ? "https://linksphere-backend-jkws.onrender.com/api/bids/freelancers-bids"
+             : "https://linksphere-backend-jkws.onrender.com/api/bids/my-bids";
           
           const myBidsRes = await axios.get(
             bidsEndpoint,

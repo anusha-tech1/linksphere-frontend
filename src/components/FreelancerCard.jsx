@@ -30,7 +30,7 @@ const loggedInUser = JSON.parse(localStorage.getItem("user"));
     <img
         src={
             freelancer.image
-             ? `http://localhost:4001/uploads/${freelancer.image}`
+             ? `https://linksphere-backend-jkws.onrender.com/uploads/${freelancer.image}`
             : "/default-avatar.png"
          }
         alt={freelancer.name}

@@ -21,7 +21,7 @@ const EditProfile = () => {
   useEffect(() => {
   
     axios
-      .get(`http://localhost:4001/api/freelancers/${id}`)
+      .get(`https://linksphere-backend-jkws.onrender.com/api/freelancers/${id}`)
       .then((res) => {
         setUserData({
           ...res.data,
@@ -86,7 +86,7 @@ const EditProfile = () => {
         formData.append("image", userData.image);
       }
 
-      await axios.put(`http://localhost:4001/api/freelancers/${id}`, formData, {
+      await axios.put(`https://linksphere-backend-jkws.onrender.com/api/freelancers/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data", 

@@ -8,7 +8,7 @@ const ApplyButton = ({ jobId }) => {
 
   const applyForJob = async () => {
     const token = localStorage.getItem("token");
-    await axios.post(`http://localhost:4001/api/jobs/${jobId}/bid`, { bidAmount, timeline, proposal }, {
+    await axios.post(`https://linksphere-backend-jkws.onrender.com/api/jobs/${jobId}/bid`, { bidAmount, timeline, proposal }, {
       headers: { Authorization: `Bearer ${token}` }
     });
     alert("Bid submitted!");

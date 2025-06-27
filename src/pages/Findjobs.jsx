@@ -57,7 +57,7 @@ const FindJobs = ({ user }) => {
       if (!token) return alert("Please log in first!");
 
       await axios.post(
-        `http://localhost:4001/api/jobs/${selectedJob._id}/apply`,
+        `https://linksphere-backend-jkws.onrender.com/api/jobs/${selectedJob._id}/apply`,
         {
           bidAmount: bidDetails.amount,
           proposal: bidDetails.proposal,

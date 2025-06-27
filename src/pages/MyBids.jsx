@@ -140,7 +140,7 @@ const MyBids = () => {
   const handleViewContract = async (contractId) => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get(`http://localhost:4001/api/contracts/${contractId}`, {
+      const res = await axios.get(`https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -159,14 +159,14 @@ const MyBids = () => {
       const token = localStorage.getItem("token");
       
       await axios.post(
-        `http://localhost:4001/api/contracts/${selectedContract._id}/sign`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${selectedContract._id}/sign`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
   
       // Refresh contract data
       const updatedContract = await axios.get(
-        `http://localhost:4001/api/contracts/${selectedContract._id}`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${selectedContract._id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       
@@ -187,7 +187,7 @@ const MyBids = () => {
       setAcceptingContract(true);
       const token = localStorage.getItem("token");
       
-      await axios.post(`http://localhost:4001/api/contracts/${contractId}/accept`, {
+      await axios.post(`https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}/accept`, {
         acceptedBy: "freelancer"
       }, {
         headers: { Authorization: `Bearer ${token}` },

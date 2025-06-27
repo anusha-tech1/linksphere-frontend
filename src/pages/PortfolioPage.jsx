@@ -20,7 +20,7 @@ const PortfolioPage = () => {
   const fetchPortfolio = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get('http://localhost:4001/api/freelancers/me', {
+      const response = await axios.get('https://linksphere-backend-jkws.onrender.com/api/freelancers/me', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -85,8 +85,8 @@ const PortfolioPage = () => {
   
     const token = localStorage.getItem('token');
     const apiUrl = isEdit
-      ? `http://localhost:4001/api/freelancers/${portfolioId}`
-      : 'http://localhost:4001/api/freelancers';
+      ? `https://linksphere-backend-jkws.onrender.com/api/freelancers/${portfolioId}`
+      : 'https://linksphere-backend-jkws.onrender.com/api/freelancers';
     const method = isEdit ? 'put' : 'post';
   
     try {

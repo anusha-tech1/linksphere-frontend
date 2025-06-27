@@ -21,7 +21,7 @@ const ContractChangeReview = () => {
           return;
         }
 
-        const res = await axios.get(`http://localhost:4001/api/contracts/${contractId}`, {
+        const res = await axios.get(`https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -42,7 +42,7 @@ const ContractChangeReview = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://localhost:4001/api/contracts/${contractId}`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
         { 
           status: "sent-to-freelancer",
           terms: updatedTerms
@@ -64,7 +64,7 @@ const ContractChangeReview = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://localhost:4001/api/contracts/${contractId}`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
         { status: "rejected" },
         { headers: { Authorization: `Bearer ${token}` } }
       );

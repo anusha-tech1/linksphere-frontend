@@ -50,7 +50,7 @@ const MyJobs = ({ user }) => {
       const jobToDelete = jobs.find(job => job._id === jobId);
       console.log("Job to delete:", jobToDelete);
 
-      const response = await axios.delete(`http://localhost:4001/api/jobs/${jobId}`, {
+      const response = await axios.delete(`https://linksphere-backend-jkws.onrender.com/api/jobs/${jobId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

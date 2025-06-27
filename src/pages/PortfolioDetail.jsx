@@ -12,7 +12,7 @@ const PortfolioDetail = () => {
   useEffect(() => {
     const fetchFreelancer = async () => {
       try {
-        const response = await axios.get(`http://localhost:4001/api/freelancers/${id}`);
+        const response = await axios.get(`https://linksphere-backend-jkws.onrender.com/api/freelancers/${id}`);
         setFreelancer(response.data);
       } catch (err) {
         setError("Failed to fetch freelancer details.");

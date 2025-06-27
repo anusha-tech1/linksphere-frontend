@@ -31,7 +31,7 @@ const ContractSigningPage = () => {
         
         // Fetch contract details
         const contractRes = await axios.get(
-          `http://localhost:4001/api/contracts/${contractId}`,
+          `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         
@@ -49,8 +49,8 @@ const ContractSigningPage = () => {
         try {
           // Based on role, fetch the appropriate bids
           const bidsEndpoint = storedUserRole === "client" 
-            ? "http://localhost:4001/api/bids/freelancers-bids" 
-            : "http://localhost:4001/api/bids/my-bids";
+            ? "https://linksphere-backend-jkws.onrender.com/api/bids/freelancers-bids" 
+            : "https://linksphere-backend-jkws.onrender.com/api/bids/my-bids";
             
           const myBidsRes = await axios.get(
             bidsEndpoint,
@@ -91,7 +91,7 @@ const ContractSigningPage = () => {
       
       // Call the sign endpoint
       await axios.post(
-        `http://localhost:4001/api/contracts/${contractId}/sign`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}/sign`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -101,7 +101,7 @@ const ContractSigningPage = () => {
       
       // Check if both parties have signed now
       const updatedContractRes = await axios.get(
-        `http://localhost:4001/api/contracts/${contractId}`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:4001/api/users"; 
+const API_URL = "https://linksphere-backend-jkws.onrender.com/api/users"; 
 
 
 export const registerUser = async (userData) => {

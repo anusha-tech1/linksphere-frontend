@@ -133,7 +133,7 @@ const ContractForm = () => {
   
       const token = localStorage.getItem('token');
       
-      const response = await fetch('http://localhost:4001/api/contracts', {
+      const response = await fetch('https://linksphere-backend-jkws.onrender.com/api/contracts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

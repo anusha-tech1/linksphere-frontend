@@ -36,7 +36,7 @@ const ContractCompletionPage = () => {
         
         // Fetch contract details
         const contractRes = await axios.get(
-          `http://localhost:4001/api/contracts/${contractId}`,
+          `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         
@@ -45,7 +45,7 @@ const ContractCompletionPage = () => {
         // Find associated bid
         try {
           const myBidsRes = await axios.get(
-            "http://localhost:4001/api/bids/freelancers-bids",
+            "https://linksphere-backend-jkws.onrender.com/api/bids/freelancers-bids",
             { headers: { Authorization: `Bearer ${token}` } }
           );
           
@@ -78,7 +78,7 @@ const ContractCompletionPage = () => {
       
       // Call the complete contract endpoint
       await axios.post(
-        `http://localhost:4001/api/contracts/${contractId}/complete`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}/complete`,
         { feedback }, // You can add this to your backend if you want to save feedback
         { headers: { Authorization: `Bearer ${token}` } }
       );

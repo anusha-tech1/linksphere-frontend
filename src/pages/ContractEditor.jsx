@@ -25,7 +25,7 @@ const ContractEditor = () => {
           return;
         }
 
-        const contractRes = await axios.get(`http://localhost:4001/api/contracts/${contractId}`, {
+        const contractRes = await axios.get(`https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -76,7 +76,7 @@ const ContractEditor = () => {
       console.log("Submitting update:", updateData); // Debug log
 
       await axios.patch(
-        `http://localhost:4001/api/contracts/${contractId}`,
+        `https://linksphere-backend-jkws.onrender.com/api/contracts/${contractId}`,
         updateData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

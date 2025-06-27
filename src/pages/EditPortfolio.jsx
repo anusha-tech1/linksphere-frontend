@@ -16,7 +16,7 @@
 //   });
 
 //   useEffect(() => {
-//     axios.get(`http://localhost:4001/api/freelancers/${id}`)
+//     axios.get(`https://linksphere-backend-jkws.onrender.com/api/freelancers/${id}`)
 //       .then(response => {
 //         const { name, role, skills, portfolioLink } = response.data;
 //         setFreelancer({
@@ -44,7 +44,7 @@
 //     };
 
 //     try {
-//       await axios.put(`http://localhost:4001/api/freelancers/${id}`, updatedData);
+//       await axios.put(`https://linksphere-backend-jkws.onrender.com/api/freelancers/${id}`, updatedData);
 //       alert('Portfolio updated successfully!');
 //       navigate(`/portfolio/${id}`);
 //     } catch (error) {
