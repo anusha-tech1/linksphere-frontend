@@ -21,7 +21,7 @@ const MyJobs = ({ user }) => {
         return;
       }
 
-      const response = await axios.get("http://localhost:4001/api/jobs/my-jobs", {
+      const response = await axios.get("https://linksphere-backend-jkws.onrender.com/api/jobs/my-jobs", {
         headers: { Authorization: `Bearer ${token}` }
       });
       

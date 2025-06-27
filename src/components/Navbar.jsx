@@ -12,7 +12,7 @@ const Navbar = () => {
       const token = localStorage.getItem("token");
       if (token) {
         try {
-          const res = await axios.get("http://localhost:4001/api/users/me", {
+          const res = await axios.get("https://linksphere-backend-jkws.onrender.com/api/users/me", {
             headers: { Authorization: `Bearer ${token}` },
           });
           setUser(res.data);

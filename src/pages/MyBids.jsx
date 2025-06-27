@@ -20,7 +20,7 @@ const MyBids = () => {
   const fetchBids = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:4001/api/bids/my-bids", {
+      const res = await axios.get("https://linksphere-backend-jkws.onrender.com/api/bids/my-bids", {
         headers: { Authorization: `Bearer ${token}` },
       });
   

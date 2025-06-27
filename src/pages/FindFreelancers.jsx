@@ -10,7 +10,7 @@ const FindFreelancers = () => {
   useEffect(() => {
     const fetchFreelancers = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/api/freelancers");
+        const response = await axios.get("https://linksphere-backend-jkws.onrender.com/api/freelancers");
         setFreelancers(response.data);
       } catch (error) {
         console.error("Error fetching freelancers:", error);

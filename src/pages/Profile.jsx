@@ -16,7 +16,7 @@ const Profile = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:4001/api/users/me", {
+        const response = await axios.get("https://linksphere-backend-jkws.onrender.com/api/users/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

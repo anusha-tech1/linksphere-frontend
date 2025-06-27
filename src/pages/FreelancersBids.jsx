@@ -33,7 +33,7 @@ const FreelancersBids = () => {
         return;
       }
   
-      const bidsRes = await axios.get("http://localhost:4001/api/bids/freelancers-bids", {
+      const bidsRes = await axios.get("https://linksphere-backend-jkws.onrender.com//api/bids/freelancers-bids", {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log('[FreelancersBids] Bids fetched:', {

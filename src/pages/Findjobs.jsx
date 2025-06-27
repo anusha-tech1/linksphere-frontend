@@ -19,7 +19,7 @@ const FindJobs = ({ user }) => {
   const fetchJobs = async (filters = {}) => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:4001/api/jobs/search", { params: filters });
+      const response = await axios.get("https://linksphere-backend-jkws.onrender.com/api/jobs/search", { params: filters });
       setJobs(response.data);
       setLoading(false);
     } catch (err) {
